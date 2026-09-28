@@ -1195,7 +1195,7 @@ a {
 
 }
 
-`;
+;
 
 document.head.appendChild(styleElement);
 
