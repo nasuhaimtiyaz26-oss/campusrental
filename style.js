@@ -5,7 +5,7 @@
  * This file creates the application's CSS dynamically.
  */
 
-const appTheme = {
+const appTheme = 
 
     colors: {
 
@@ -221,7 +221,7 @@ root.style.setProperty(
 
 const styleElement = document.createElement("style");
 
-styleElement.textContent = `
+styleElement.textContent = 
 
 * {
     box-sizing: border-box;
