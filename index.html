@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CampusRent - A campus marketplace for renting useful items from other students."
+    >
+
+    <title>CampusRent</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="header-container">
+
+            <a href="#" class="logo">
+                Campus<span>Rent</span>
+            </a>
+
+            <nav class="desktop-nav">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#browse" class="nav-link">
+                    Browse
+                </a>
+
+                <a href="#requests" class="nav-link">
+                    Requests
+                </a>
+
+                <a href="#activity" class="nav-link">
+                    Activity
+                </a>
+
+                <a href="#profile" class="nav-link">
+                    Profile
+                </a>
+
+            </nav>
+
+            <button
+                class="header-profile"
+                id="profileButton"
+                type="button"
+            >
+                👤
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    🎓 Made for campus life
+                </span>
+
+                <h1>
+                    Rent what you need.
+                    <br>
+                    Share what you have.
+                </h1>
+
+                <p>
+                    A simple campus marketplace where students
+                    can rent useful items from each other.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-button"
+                        id="browseButton"
+                        type="button"
+                    >
+                        Browse Items
+                    </button>
+
+                    <button
+                        class="secondary-button"
+                        id="listItemButton"
+                        type="button"
+                    >
+                        + List an Item
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section
+            class="search-section"
+            id="browse"
+        >
+
+            <div class="section-container">
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search items..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="category-container">
+
+                    <button
+                        class="category-button active"
+                        data-category="All"
+                        type="button"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Electronics"
+                        type="button"
+                    >
+                        Electronics
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Camera"
+                        type="button"
+                    >
+                        Camera
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Tools"
+                        type="button"
+                    >
+                        Tools
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Sports"
+                        type="button"
+                    >
+                        Sports
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Camping"
+                        type="button"
+                    >
+                        Camping
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Study"
+                        type="button"
+                    >
+                        Study
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="Others"
+                        type="button"
+                    >
+                        Others
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ITEMS ================= -->
+
+        <section class="items-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            CAMPUS MARKETPLACE
+                        </span>
+
+                        <h2>
+                            Available near you
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="item-count"
+                        id="itemCount"
+                    >
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="items-grid"
+                    id="itemsGrid"
+                >
+                    <!-- JavaScript will render items here -->
+                </div>
+
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        No items found
+                    </h3>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section">
+
+            <div class="section-container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        SIMPLE PROCESS
+                    </span>
+
+                    <h2>
+                        How CampusRent works
+                    </h2>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            🔍
+                        </div>
+
+                        <h3>
+                            Find an item
+                        </h3>
+
+                        <p>
+                            Search for the item you need
+                            from students around campus.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            📅
+                        </div>
+
+                        <h3>
+                            Request rental
+                        </h3>
+
+                        <p>
+                            Choose your rental dates
+                            and send a request to the owner.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            🤝
+                        </div>
+
+                        <h3>
+                            Pick up
+                        </h3>
+
+                        <p>
+                            Collect the item from the owner
+                            or an approved campus pickup point.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div class="step-icon">
+                            ↩️
+                        </div>
+
+                        <h3>
+                            Return & review
+                        </h3>
+
+                        <p>
+                            Return the item and leave a
+                            rating for the rental experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRUST ================= -->
+
+        <section class="trust-section">
+
+            <div class="section-container">
+
+                <div class="trust-content">
+
+                    <span class="section-label">
+                        TRUST & SAFETY
+                    </span>
+
+                    <h2>
+                        Built for a safer campus community.
+                    </h2>
+
+                    <p>
+                        CampusRent is designed to make
+                        student-to-student rentals simple,
+                        transparent and secure.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-grid">
+
+                    <div class="trust-card">
+
+                        <span class="trust-icon">
+                            ⭐
+                        </span>
+
+                        <h3>
+                            Student ratings
+                        </h3>
+
+                        <p>
+                            Build trust through rental
+                            ratings and reviews.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-icon">
+                            🛡️
+                        </span>
+
+                        <h3>
+                            Secure payments
+                        </h3>
+
+                        <p>
+                            Future payment security will
+                            protect important transactions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-icon">
+                            📍
+                        </span>
+
+                        <h3>
+                            Campus pickup
+                        </h3>
+
+                        <p>
+                            Use convenient campus pickup
+                            locations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-icon">
+                            🔐
+                        </span>
+
+                        <h3>
+                            Account security
+                        </h3>
+
+                        <p>
+                            Future versions will support
+                            modern authentication methods.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLACEHOLDER SECTIONS ================= -->
+
+        <section
+            class="placeholder-section"
+            id="requests"
+        >
+
+            <div class="section-container">
+
+                <span class="section-label">
+                    REQUESTS
+                </span>
+
+                <h2>
+                    Rental Requests
+                </h2>
+
+                <p>
+                    Your rental requests will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section
+            class="placeholder-section"
+            id="activity"
+        >
+
+            <div class="section-container">
+
+                <span class="section-label">
+                    ACTIVITY
+                </span>
+
+                <h2>
+                    Rental Activity
+                </h2>
+
+                <p>
+                    Your rental activity will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section
+            class="placeholder-section"
+            id="profile"
+        >
+
+            <div class="section-container">
+
+                <span class="section-label">
+                    PROFILE
+                </span>
+
+                <h2>
+                    Your Profile
+                </h2>
+
+                <p>
+                    Profile and security settings will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ITEM MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="itemModal"
+        hidden
+    >
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalItemName"
+        >
+
+            <button
+                class="modal-close"
+                id="closeModal"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-image"
+                id="modalItemImage"
+            >
+                📦
+            </div>
+
+            <span
+                class="modal-category"
+                id="modalItemCategory"
+            >
+                Category
+            </span>
+
+            <h2 id="modalItemName">
+                Item
+            </h2>
+
+            <p
+                class="modal-description"
+                id="modalItemDescription"
+            >
+                Item description.
+            </p>
+
+            <div class="modal-details">
+
+                <div>
+                    <span>Price</span>
+                    <strong id="modalItemPrice">
+                        RM0/day
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Rating</span>
+                    <strong id="modalItemRating">
+                        ⭐ 0.0
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Location</span>
+                    <strong id="modalItemLocation">
+                        Campus
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Owner</span>
+                    <strong id="modalItemOwner">
+                        Student
+                    </strong>
+                </div>
+
+            </div>
+
+            <button
+                class="primary-button full-width"
+                id="rentalButton"
+                type="button"
+            >
+                Request Rental
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MOBILE NAVIGATION ================= -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="#home"
+            class="mobile-nav-item active"
+        >
+            <span>⌂</span>
+            <small>Home</small>
+        </a>
+
+        <a
+            href="#browse"
+            class="mobile-nav-item"
+        >
+            <span>🔍</span>
+            <small>Browse</small>
+        </a>
+
+        <a
+            href="#requests"
+            class="mobile-nav-item"
+        >
+            <span>📝</span>
+            <small>Requests</small>
+        </a>
+
+        <a
+            href="#activity"
+            class="mobile-nav-item"
+        >
+            <span>◷</span>
+            <small>Activity</small>
+        </a>
+
+        <a
+            href="#profile"
+            class="mobile-nav-item"
+        >
+            <span>👤</span>
+            <small>Profile</small>
+        </a>
+
+    </nav>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <a href="#" class="logo">
+                    Campus<span>Rent</span>
+                </a>
+
+                <p>
+                    Rent what you need.
+                    Share what you have.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Safety
+                </a>
+
+                <a href="#">
+                    Help
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CampusRent. Campus rental marketplace.
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="style.js"></script>
+    <script src="javascript.js"></script>
+
+</body>
+</html>
